@@ -11,7 +11,7 @@ public class Main {
                 "eu fugiat nulla pariatur. Excepteur sint occaecat " +
                 "cupidatat non proident, sunt in culpa qui officia " +
                 "deserunt mollit anim id est laborum.";
-        WordsChecker wordsChecker = new WordsChecker (text);
+        WordsChecker wordsChecker = new WordsChecker(text);
         System.out.println(wordsChecker.hasWord("dolor"));
         System.out.println(wordsChecker.hasWord("Netology"));
     }
