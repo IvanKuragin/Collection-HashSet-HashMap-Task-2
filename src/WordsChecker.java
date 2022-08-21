@@ -1,6 +1,5 @@
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 public class WordsChecker {
@@ -8,22 +7,14 @@ public class WordsChecker {
     protected Set<String> wordSet;
 
     public WordsChecker(String text) {
-        this.text = text;
+        this.text = text.toLowerCase();
+        String[] words = text.split("\\P{IsAlphabetic}+");
         wordSet = new HashSet<>();
+        wordSet.addAll(Arrays.asList(words));
     }
 
     public boolean hasWord(String word) {
-        String text1 = text.toLowerCase();
         String wordLower = word.toLowerCase();
-        String[] words = text1.split("\\P{IsAlphabetic}+");
-        wordSet.addAll(Arrays.asList(words));
-        Iterator<String> it = wordSet.iterator();
-        while (it.hasNext()) {
-            String word2 = it.next();
-            if (wordLower.equals(word2)) {
-                return true;
-            }
-        }
-        return false;
+        return wordSet.contains(wordLower);
     }
 }

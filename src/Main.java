@@ -12,7 +12,7 @@ public class Main {
                 "cupidatat non proident, sunt in culpa qui officia " +
                 "deserunt mollit anim id est laborum.";
         WordsChecker wordsChecker = new WordsChecker(text);
-        System.out.println(wordsChecker.hasWord("dolor"));
+        System.out.println(wordsChecker.hasWord("DoLoR"));
         System.out.println(wordsChecker.hasWord("Netology"));
     }
 }
